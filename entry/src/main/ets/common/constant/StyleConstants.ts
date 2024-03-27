@@ -1,4 +1,9 @@
-export default class {
+
+// 样式
+export default class StyleConstants {
+
+  // 充满父布局
+  static readonly MATCH_PARENT: string = '100%'; // ‘100%’
 
   // THOUSANDTH
   static readonly THOUSANDTH_15: string = '1.5%'; // ‘1.5%’
@@ -20,38 +25,6 @@ export default class {
   static readonly THOUSANDTH_900: string = '90%'; // ‘90%’
   static readonly THOUSANDTH_940: string = '94%'; // ‘90%’
   static readonly THOUSANDTH_1000: string = '100%'; // ‘100%’
-
-  static readonly DEFAULT_2: number = 2;
-
-  static readonly DEFAULT_6: number = 6;
-
-  static readonly DEFAULT_8: number = 8;
-
-  static readonly DEFAULT_12: number = 12;
-
-  static readonly DEFAULT_10: number = 10;
-
-  static readonly DEFAULT_16: number = 16;
-
-  static readonly DEFAULT_18: number = 18;
-
-  static readonly DEFAULT_20: number = 20;
-
-  static readonly DEFAULT_24: number = 24;
-
-  static readonly DEFAULT_28: number = 28;
-
-  static readonly DEFAULT_32: number = 32;
-
-  static readonly DEFAULT_48: number = 48;
-
-  static readonly DEFAULT_56: number = 56;
-
-  static readonly DEFAULT_60: number = 60;
-
-  static readonly DEFAULT_100: number = 100;
-
-  static readonly DEFAULT_180: number = 180;
 
   // fontWeight
   static readonly FONT_WEIGHT_400: number = 400;
@@ -91,4 +64,5 @@ export default class {
   static readonly SPACE_10: number = 10;
 
   static readonly SPACE_12: number = 12;
+
 }

@@ -1,4 +1,4 @@
-import CommonConstants from '../common/constant/CommonConstants'
+import StyleConstants from '../common/constant/StyleConstants'
 import router from '@ohos.router'
 
 @Entry
@@ -15,7 +15,7 @@ struct WelcomePage {
   }
 
   build() {
-    Column({ space: CommonConstants.SPACE_10 }) {
+    Column({ space: StyleConstants.SPACE_10 }) {
       Image($r("app.media.app_icon"))
         .width(128)
       Text(this.message)

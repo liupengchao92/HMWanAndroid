@@ -1,3 +1,4 @@
+import HomeContent from '../view/home/HomeContent'
 @Entry
 @Component
 struct IndexPage {
@@ -10,7 +11,7 @@ struct IndexPage {
       Tabs() {
         // 主页
         TabContent() {
-          Text('主页').fontSize(25)
+          HomeContent()
         }.tabBar(this.TabBarBuilder($r('app.string.tab_home'), $r('app.media.ic_tab_home'), 0))
         // 体系
         TabContent() {
