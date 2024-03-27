@@ -11,6 +11,25 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "tab_home",
+      "value": "首页"
+    },{
+      "name": "tab_hierarchy",
+      "value": "体系"
+    },
+    {
+      "name": "tab_wechat",
+      "value": "公众号"
+    },
+    {
+      "name": "tab_navigate",
+      "value": "导航"
+    },
+    {
+      "name": "tab_project",
+      "value": "项目"
     }
   ]
 }

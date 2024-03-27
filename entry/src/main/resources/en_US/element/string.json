@@ -11,6 +11,24 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },  {
+      "name": "tab_home",
+      "value": "home"
+    },{
+      "name": "tab_hierarchy",
+      "value": "hierarchy"
+    },
+    {
+      "name": "tab_wechat",
+      "value": "wechat"
+    },
+    {
+      "name": "tab_navigate",
+      "value": "navigate"
+    },
+    {
+      "name": "tab_project",
+      "value": "project"
     }
   ]
 }
