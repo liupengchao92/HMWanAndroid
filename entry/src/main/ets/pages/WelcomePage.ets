@@ -11,20 +11,19 @@ struct WelcomePage {
       router.replaceUrl({
         url:'pages/IndexPage'
       })
-    },1000)
+    },2000)
   }
 
   build() {
     Column({ space: CommonConstants.SPACE_10 }) {
-      Image($r('app.media.app_icon'))
+      Image($r("app.media.app_icon"))
         .width(128)
       Text(this.message)
         .fontSize(46)
         .fontWeight(FontWeight.Regular)
-        .fontColor(Color.White)
+        .fontColor(Color.Black)
     }
     .justifyContent(FlexAlign.Center)
-    .backgroundColor($r('app.color.primary_color'))
     .width('100%')
     .height('100%')
   }
