@@ -1,6 +1,14 @@
+import HomeViewModel from '../../viewmodel/HomeViewModel'
 @Component
 export default struct Banner {
   private swiperController: SwiperController = new SwiperController()
+
+
+  aboutToAppear(){
+
+    // 获取轮播图
+    HomeViewModel.getBanner()
+  }
 
   build() {
     Swiper(this.swiperController) {
