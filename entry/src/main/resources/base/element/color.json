@@ -63,6 +63,10 @@
     {
       "name": "stats_title_bgc",
       "value": "#d6eee1"
+    },
+    {
+      "name": "divider_color",
+      "value": "#F1F3F5"
     }
   ]
 }
