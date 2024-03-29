@@ -1,5 +1,5 @@
 
-export default class BannerItem {
+export default class BannerItemVo {
   desc: string
   id: number
   imagePath: string
