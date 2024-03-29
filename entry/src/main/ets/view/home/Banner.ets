@@ -1,37 +1,38 @@
+import StyleConstants from '../../common/constant/StyleConstants'
+import BannerItem from '../../model/BannerItemVo'
 import HomeViewModel from '../../viewmodel/HomeViewModel'
+
 @Component
 export default struct Banner {
   private swiperController: SwiperController = new SwiperController()
+  @State
+  banners: BannerItem [] = []
 
-
-  aboutToAppear(){
-
-    // 获取轮播图
-    HomeViewModel.getBanner()
+  async aboutToAppear() {
+    this.banners = await HomeViewModel.getBanner()
   }
 
   build() {
-    Swiper(this.swiperController) {
-      ForEach(['1', '2', '3'], item => {
-        Text(item)
-          .width('100%')
-          .height(160)
-          .backgroundColor($r('app.color.light_primary_color'))
-          .textAlign(TextAlign.Center)
-          .fontSize(30)
+    if (this.banners && this.banners.length > 0) {
+      Swiper(this.swiperController) {
+        ForEach(this.banners, (item: BannerItem) => {
+          Image(item.imagePath)
+            .width(StyleConstants.MATCH_PARENT)
+            .height(180)
+        })
+      }
+      .cachedCount(2)
+      .index(0)
+      .autoPlay(true)
+      .interval(3000)
+      .indicator(true)
+      .loop(true)
+      .duration(1000)
+      .itemSpace(0)
+      .curve(Curve.Linear)
+      .onChange((index: number) => {
+        console.info(index.toString())
       })
     }
-    .cachedCount(2)
-    .index(0)
-    .autoPlay(true)
-    .interval(4000)
-    .indicator(true)
-    .loop(true)
-    .duration(1000)
-    .itemSpace(0)
-    .curve(Curve.Linear)
-    .onChange((index: number) => {
-      console.info(index.toString())
-    })
   }
 }
