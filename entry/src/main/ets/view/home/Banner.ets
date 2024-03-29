@@ -14,7 +14,7 @@ export default struct Banner {
 
   build() {
     Stack() {
-      if (this.banners && this.banners.length > 0) {
+      if (this.banners.length > 0) {
         Swiper(this.swiperController) {
           ForEach(this.banners, (item: BannerItemVo) => {
             Image(item.imagePath)

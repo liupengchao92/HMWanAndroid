@@ -36,7 +36,10 @@ export function requestGet<T>(url: string, params?: any): Promise<T> {
     instance.get(url, { params }).then(respond => {
       if (respond.status == 200) {
         const data = respond.data as HttpRespond<T>
-        return resolve(data.data)
+        if (data.errorCode == 0) {
+          return resolve(data.data)
+        }
+        return reject(new Error(data.errorMsg))
       }
       return reject(new Error(respond.statusText))
     }).catch(error => {
@@ -44,8 +47,4 @@ export function requestGet<T>(url: string, params?: any): Promise<T> {
     })
   })
 }
-
-// 导出对象
-export default instance as Axios
-
 
